@@ -8,7 +8,7 @@
     display               : grid;
     align-items           : flex-start;
     justify-items         : flex-end;
-    grid-template-columns : 1fr 1fr;
+    grid-template-columns : 45% 1fr;
     max-width: 75rem;
     margin: 0 auto;
 }
@@ -35,12 +35,16 @@
 }
 
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 1024px) { 
     .nav {
         display               : grid;
         grid-template-columns : 25% 1fr;
         justify-items         : end;
         align-items           : flex-start;
+    }
+    .button {
+        font-size : 16px;
+        padding   : 5px 15px;
     }
 
 }

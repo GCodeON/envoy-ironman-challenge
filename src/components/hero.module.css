@@ -2,7 +2,7 @@
     background-image: url('../images/bg.png');
     background-size: cover;
     background-position: bottom right;
-    padding: 100px 0 50px;
+    padding: 125px 0 75px;
 }
 
 .content {
@@ -35,7 +35,7 @@
 .button:hover {
     background-image: conic-gradient(from 3.5708rad at 50% 50%, #CC3332 10%, #CC3332 5%, #F4BC00 45%, #CC3332, #CC3332 );
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .bg {
         background-position: bottom;
         padding: 150px 0;
@@ -49,27 +49,27 @@
         justify-content : center;
         align-items     : flex-start;
         max-width       : 75rem;
-        margin: 0 auto;
+        margin          : 0 auto;
     }
     .media {
         max-width: 500px;
     }
 
     .content {
-        text-align: left;
-        max-width: 838px;
-        padding-top: 50px;
-        margin: 0;
+        text-align  : left;
+        max-width   : 838px;
+        padding-top : 50px;
+        margin      : 0;
     }    
     .desc {
-        padding: 0;
-        font-size: 24px;
-        padding-right: 135px;
+        padding       : 0;
+        font-size     : 24px;
+        padding-right : 135px;
     }
     .media {
-        padding-right: 50px;
+        padding-right : 50px;
     }
     .button {
-        margin-top: 75px;
+        margin-top : 75px;
     }
 }
