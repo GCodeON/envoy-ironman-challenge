@@ -15,9 +15,9 @@ const Info = ({props, children}) => {
                 <div className={styles.media}>
                     {children}
                 </div>
-                <div class={styles.info}>
-                    {props.facts.map(fact => (
-                        <div className={styles.fact}>
+                <div className={styles.info}>
+                    {props.facts.map((fact, i) => (
+                        <div className={styles.fact} key={i}>
                             {/* Learned that the static image component doesn't work by passing froms from parent to child, need to query image paths directly */}
                             <img
                                 src={fact.icon} 
