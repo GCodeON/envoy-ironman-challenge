@@ -1,0 +1,15 @@
+import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
+
+const Hero = () => {
+    return (
+        <div className="hero">
+            <div className="media">
+                <StaticImage src="../images/chibi.png" alt="iron man" />
+            </div>
+
+        </div>
+    );
+}
+
+export default Hero
