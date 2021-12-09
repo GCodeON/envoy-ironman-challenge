@@ -1,15 +1,44 @@
-import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-
-const Hero = () => {
-    return (
-        <div className="hero">
-            <div className="media">
-                <StaticImage src="../images/chibi.png" alt="iron man" />
-            </div>
-
-        </div>
-    );
+.navigation {
+    position  : absolute;
+    top       : 0;
+    margin: 2em 1em;
+    width: -webkit-fill-available;
+}
+.nav {
+    display               : grid;
+    align-items           : flex-start;
+    justify-items         : flex-end;
+    grid-template-columns : 1fr 1fr;
 }
 
-export default Hero
+.logo {
+    /* max-width: 167px; */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+.button {
+    cursor : pointer;
+    /* padding       : 10px 20px; */
+    padding        : 5px 10px;
+    border-radius  : 5px;
+    border-radius  : 1.4px;
+    font-family    : RalewayRoman-SemiBold;
+    font-size      : 12px;
+    color          : #FFFFFF;
+    letter-spacing : 0;
+    
+}
+
+
+@media screen and (min-width: 768px) { 
+    .nav {
+        display               : grid;
+        grid-template-columns : 25% 1fr;
+        justify-items         : end;
+        align-items           : flex-start;
+    }
+
+}

@@ -1,0 +1,15 @@
+@import "../css/typography.css";
+
+body {
+    margin: 0;
+    font-family: "Nunito", georgia, serif;
+}
+p {
+    font-family: "Nunito", georgia, serif;
+}
+
+.gold {
+    background-color : #F4BC00;
+    color            : white;
+    border           : none;
+}

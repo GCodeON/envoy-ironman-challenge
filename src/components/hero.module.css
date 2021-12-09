@@ -1,15 +1,61 @@
-import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-
-const Hero = () => {
-    return (
-        <div className="hero">
-            <div className="media">
-                <StaticImage src="../images/chibi.png" alt="iron man" />
-            </div>
-
-        </div>
-    );
+.bg {
+    background-image: url('../images/bg.png');
+    background-size: cover;
+    background-position: bottom right;
+    padding: 100px 0 50px;
 }
 
-export default Hero
+.content {
+    text-align: center;
+    margin: 0 auto;
+}
+.media {
+    max-width: 230px;
+    margin: 0 auto;
+}
+.desc {
+    color      : white;
+    padding: 1em;
+    margin: 0;
+}
+.button {
+    background     : #F4BC00;
+    box-shadow     : 2px 3px 5px 0 rgba(255,255,255,0.16);
+    border-radius  : 3.12px;
+    font-family    : RalewayRoman-Bold;
+    font-size      : 15px;
+    color          : #FFFFFF;
+    letter-spacing : 0;
+    min-width      : 200px;
+    cursor         : pointer;
+    border-radius  : 5px;
+    
+}
+@media screen and (min-width: 768px) {
+    .bg {
+        background-position: bottom;
+        padding: 150px 0;
+        /* min-height: 120vh; */
+    }
+    .heroContainer {
+        /* display               : grid;
+        grid-template-columns : 60% 1fr; */
+        display         : flex;
+        flex-direction  : row-reverse;
+        justify-content : center;
+        align-items     : center;
+        max-width       : 75rem;
+        /* margin: 0 auto; */
+    }
+    .media {
+        max-width: 500px;
+    }
+
+    .content {
+        text-align: left;
+    }
+    .button:hover {
+        background-image: conic-gradient(from 3.5708rad at 50% 50%, #CC3332 10%, #CC3332 5%, #F4BC00 45%, #CC3332, #CC3332 );
+    }
+    
+}

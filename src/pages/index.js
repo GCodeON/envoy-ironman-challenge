@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Layout from '../components/layout';
 import Navigation from '../components/navigation';
 import Hero from '../components/hero';
 
@@ -15,10 +16,10 @@ const IndexPage = () => {
 
   return (
 
-    <div className="page">
+    <Layout>
       <Navigation />
       <Hero props={hero} />
-    </div>
+    </Layout>
     
   )
 }
