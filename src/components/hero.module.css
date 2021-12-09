@@ -31,6 +31,10 @@
     border-radius  : 5px;
     
 }
+
+.button:hover {
+    background-image: conic-gradient(from 3.5708rad at 50% 50%, #CC3332 10%, #CC3332 5%, #F4BC00 45%, #CC3332, #CC3332 );
+}
 @media screen and (min-width: 768px) {
     .bg {
         background-position: bottom;
@@ -43,9 +47,9 @@
         display         : flex;
         flex-direction  : row-reverse;
         justify-content : center;
-        align-items     : center;
+        align-items     : flex-start;
         max-width       : 75rem;
-        /* margin: 0 auto; */
+        margin: 0 auto;
     }
     .media {
         max-width: 500px;
@@ -53,9 +57,19 @@
 
     .content {
         text-align: left;
+        max-width: 838px;
+        padding-top: 50px;
+        margin: 0;
+    }    
+    .desc {
+        padding: 0;
+        font-size: 24px;
+        padding-right: 135px;
     }
-    .button:hover {
-        background-image: conic-gradient(from 3.5708rad at 50% 50%, #CC3332 10%, #CC3332 5%, #F4BC00 45%, #CC3332, #CC3332 );
+    .media {
+        padding-right: 50px;
     }
-    
+    .button {
+        margin-top: 75px;
+    }
 }

@@ -1,5 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+
 
 import * as styles from "./hero.module.css"
 
@@ -18,9 +20,11 @@ const Hero = ({props}) => {
                     <p className={styles.desc}>
                         {props.description}
                     </p>
-                    <button className={`gold ${styles.button}`}>
-                        <p>Get Started</p>
-                    </button>
+                    <Link to="/">
+                        <button className={`gold ${styles.button}`}>
+                            <p>Get Started</p>
+                        </button>
+                    </Link>
                 </div>
             </div>
             

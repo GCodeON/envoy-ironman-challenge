@@ -9,6 +9,8 @@
     align-items           : flex-start;
     justify-items         : flex-end;
     grid-template-columns : 1fr 1fr;
+    max-width: 75rem;
+    margin: 0 auto;
 }
 
 .logo {
