@@ -1,0 +1,62 @@
+.container {
+    max-width  : 75rem;
+    margin     : 1em auto;
+    text-align : center;
+    padding    : 1em;
+}
+
+.headline {
+  padding : 0 1em;
+  margin  : 2em 0;
+}
+.content {
+
+}
+
+.media {
+
+}
+.info {
+    text-align : left;
+}
+
+.fact {
+    margin : 2em 0;
+}
+.sub {
+    font-family : "Ropa", georgia, serif;
+    margin      : 0.5em 0 1em;
+}
+.copy {
+    font-size: 14px;
+}
+@media screen and (min-width: 767px) { 
+    .content {
+        display               : grid;
+        grid-template-columns : 1fr 55%;
+        align-items           : flex-start;
+        align-items           : center;
+        gap                   : 50px;
+    }
+    .info {
+        display               : grid;
+        grid-template-columns : 1fr 1fr;
+        gap                   : 10px 50px ;
+    }
+    .fact {
+        margin : 0;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) { 
+    .headline {
+        padding: 0;
+    }
+    .content {
+        align-items: flex-start;
+    }
+    .copy {
+        font-size: 16px;
+    }
+}

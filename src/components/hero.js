@@ -6,7 +6,6 @@ import { Link } from "gatsby"
 import * as styles from "./hero.module.css"
 
 const Hero = ({props}) => {
-    console.log(props);
     return (
         <div className={`hero ${styles.bg}`}>
             <div className={styles.heroContainer}>

@@ -1,4 +1,9 @@
 @font-face {
-    font-family: "Nunito";
-    src: url("../fonts/nunito.ttf");
+    font-family : "Nunito";
+    src         : url("../fonts/nunito.ttf");
+}
+
+@font-face {
+    font-family : "Ropa";
+    src         : url("../fonts/ropa.ttf");
 }

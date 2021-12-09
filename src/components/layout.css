@@ -13,3 +13,13 @@ p {
     color            : white;
     border           : none;
 }
+
+.apiImage {
+    max-width: 100%;
+}
+/* 
+@media screen and (min-width: 1024px) { 
+    .apiImage {
+        max-width: 470px;
+    }
+} */

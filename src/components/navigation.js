@@ -2,7 +2,7 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import * as styles from "./navigation.module.css"
-import logo from '../images/Logo.svg'
+// import logo from '../images/Logo.svg'
 
 
 const Navigation = () => {
