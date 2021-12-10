@@ -5,6 +5,9 @@ import Layout from '../components/layout';
 import Navigation from '../components/navigation';
 import Hero from '../components/hero';
 import Info from '../components/info';
+import Covers from '../components/covers';
+
+import { Carousel } from '@trendyol-js/react-carousel';
 
 import geniusIcon from '../images/genius-icon.png';
 import engineerIcon from '../images/engineer-icon.png';
@@ -12,14 +15,38 @@ import businessmanIcon from '../images/businessman-icon.png';
 import tacticianIcon from '../images/tactician-icon.png';
 
 const IndexPage = () => {
+
+  const base_url = 'https://gateway.marvel.com/v1/public/characters';
+
+  const [loading, setLoading] = useState(true);
   const [hero, sethero] = useState(false);
+  const [comics, setcomics] = useState(false);
+  
 
   useEffect(() => {
-    axios.get(`https://gateway.marvel.com/v1/public/characters?name=iron%20man&apikey=${process.env.GATSBY_MARVEL_API_KEY}`)
-    .then(response => sethero(response.data.data.results[0]))
-  }, [])
+    getHero('iron man');
+  }, [loading])
 
-  console.log('hero', hero)
+  const getComics = (id) => {
+    axios.get(`${base_url}/${id}/comics?apikey=${process.env.GATSBY_MARVEL_API_KEY}`)
+    .then((response) =>  {
+      setcomics(response.data.data);
+    })
+  }
+
+  const getHero = (name) => {
+    axios.get(`${base_url}?name=${name}&apikey=${process.env.GATSBY_MARVEL_API_KEY}`)
+    .then((response) =>  {
+      sethero(response.data.data.results[0]) 
+
+      if(hero.id) {
+        getComics(hero.id);
+      }
+      setLoading(false)
+    })
+  }
+
+
   const info = {
     headline: 'Contrary to popular belief, he knows exactly what he’s doing.',
     facts: [
@@ -54,9 +81,14 @@ const IndexPage = () => {
       <Navigation />
       <Hero props={hero} />
       <Info props={info}>
-        {/* Workaround to be able to display api image due to loading data from the client side */}
         <img className="apiImage" src={apiImage} alt="iron man"></img>
       </Info>
+      { comics ? (
+        <Covers props={comics}/>
+      ) : (
+        <div>loading...</div>
+      )}
+
     </Layout>
     
   )
