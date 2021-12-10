@@ -7,8 +7,6 @@ import Hero from '../components/hero';
 import Info from '../components/info';
 import Covers from '../components/covers';
 
-import { Carousel } from '@trendyol-js/react-carousel';
-
 import geniusIcon from '../images/genius-icon.png';
 import engineerIcon from '../images/engineer-icon.png';
 import businessmanIcon from '../images/businessman-icon.png';
@@ -86,7 +84,7 @@ const IndexPage = () => {
       { comics ? (
         <Covers props={comics}/>
       ) : (
-        <div>loading...</div>
+        <div class="load">loading...</div>
       )}
 
     </Layout>

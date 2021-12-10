@@ -17,9 +17,11 @@ p {
 .apiImage {
     max-width: 100%;
 }
-/* 
-@media screen and (min-width: 1024px) { 
-    .apiImage {
-        max-width: 470px;
-    }
-} */
+
+
+.slick-slide div {
+    margin: 0 10px;
+}
+.load {
+    text-align: center;
+}
